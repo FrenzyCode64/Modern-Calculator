@@ -1,0 +1,152 @@
+﻿<Window x:Class="ModernCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModernCalculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="575" Width="375"
+        
+        
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Background="Transparent"
+        >
+    <Border CornerRadius="20" 
+            Background="#23276F" BorderThickness="5">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                <GradientStop Color="#BA5370" Offset="0"/>
+                <GradientStop Color="#d04ed6" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+
+        <Grid Name="grid_UserMenu" 
+              Margin="25">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="54*"/>
+                <RowDefinition Height="461*"/>
+            </Grid.RowDefinitions>
+
+            <Border Name="border_Display" 
+                    Background="#000000" 
+                    BorderBrush="#505050"
+                    Grid.Row="0"
+                    CornerRadius="10" BorderThickness="5"/>
+            <StackPanel Name="grid_ButtonsPanel"
+                        Grid.Row="1" Margin="0 20 0 0">
+                <Grid Name="grid_SettingsPanel" Height="30">
+                    <Button Width="140"
+                            HorizontalAlignment="Left"
+                            BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                                <GradientStop Color="#eacda3" Offset="0"/>
+                                <GradientStop Color="#d6ae7b" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button Width="140"
+                            HorizontalAlignment="Right"
+                            BorderThickness="0">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                                <GradientStop Color="#B24592" Offset="0"/>
+                                <GradientStop Color="#F15F79" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+
+                <Grid Name="grid_ButtonPlaceHolder" 
+                      Margin="0 30 0 0" Height="350">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="0.25*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="0.25*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Column="0" Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Button Margin="15 15" 
+                                Background="#7F5CC7" BorderThickness="0"
+                                Grid.Column="0" Grid.Row="0"/>
+                        <Button Margin="15 15" 
+                                Background="#7F5CC7" BorderThickness="0"
+                                Grid.Column="1" Grid.Row="0"/>
+                        <Button Margin="15 15" 
+                                Background="#7F5CC7" BorderThickness="0"
+                                Grid.Column="2" Grid.Row="0"/>
+                        <Button Margin="15 15" 
+                                Background="#7F5CC7" BorderThickness="0"
+                                Grid.Column="0" Grid.Row="1"/>
+                        <Button Margin="15 15" 
+                                Background="#7F5CC7" BorderThickness="0"
+                                Grid.Column="1" Grid.Row="1"/>
+                        <Button Margin="15 15" 
+                                Background="#7F5CC7" BorderThickness="0"
+                                Grid.Column="2" Grid.Row="1"/>
+                        <Button Margin="15 15" 
+                                Background="#7F5CC7" BorderThickness="0"
+                                Grid.Column="0" Grid.Row="2"/>
+                        <Button Margin="15 15" 
+                                Background="#7F5CC7" BorderThickness="0"
+                                Grid.Column="1" Grid.Row="2"/>
+                        <Button Margin="15 15" 
+                                Background="#7F5CC7" BorderThickness="0"
+                                Grid.Column="2" Grid.Row="2"/>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Margin="5 10"
+                                Background="#DCE14C" BorderThickness="0"
+                                Grid.Column="0" Grid.Row="0"/>
+                        <Button Margin="5 10"
+                                Background="#DCE14C" BorderThickness="0"
+                                Grid.Column="0" Grid.Row="1"/>
+                        <Button Margin="5 10"
+                                Background="#DCE14C" BorderThickness="0"
+                                Grid.Column="1" Grid.Row="0"/>
+                        <Button Margin="5 10"
+                                Background="#DCE14C" BorderThickness="0"
+                                Grid.Column="1" Grid.Row="2"/>
+                    </Grid>
+                    <Grid Grid.Column="0" Grid.Row="1">
+                        
+                    </Grid>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
