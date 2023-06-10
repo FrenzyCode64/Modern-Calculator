@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\App.xaml
-11407045341
+4-938156643
 
-5-890244336
+8-1247424562
 1981827736222
-MainWindow.xaml;
+MainWindow.xaml;MVVM\View\CustomControls\Button_BasicNum.xaml;MVVM\View\CustomControls\Button_Result.xaml;MVVM\View\CustomControls\Button_Termination.xaml;
 
-False
+True
 

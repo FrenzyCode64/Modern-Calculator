@@ -19,3 +19,10 @@ E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net
 E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\ModernCalculator.pdb
 E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\ModernCalculator.genruntimeconfig.cache
 E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\ref\ModernCalculator.dll
+E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\CustomControls\Button_BasicNum.g.cs
+E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\CustomControls\Button_BasicNum.baml
+E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\CustomControls\Button_Termination.g.cs
+E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\CustomControls\Button_Termination.baml
+E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\CustomControls\Button_Result.g.cs
+E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\CustomControls\Button_Result.baml
