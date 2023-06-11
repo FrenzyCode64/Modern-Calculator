@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ModernCalculator.MVVM.View.CustomControls
 {
@@ -20,9 +8,21 @@ namespace ModernCalculator.MVVM.View.CustomControls
     /// </summary>
     public partial class Button_Result : UserControl
     {
+        public static readonly RoutedEvent Click_RoutedEvent = EventManager.RegisterRoutedEvent(nameof(EventClick), RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(Button_Result));
+        public event RoutedEventHandler EventClick
+        {
+            add { AddHandler(Click_RoutedEvent, value); }
+            remove { RemoveHandler(Click_RoutedEvent, value); }
+        }
+
         public Button_Result()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            RaiseEvent(new RoutedEventArgs(Click_RoutedEvent));
         }
     }
 }

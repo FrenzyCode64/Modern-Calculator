@@ -3,13 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
              xmlns:local="clr-namespace:ModernCalculator.MVVM.View.CustomControls"
+             xmlns:main="clr-namespace:ModernCalculator" 
              
              x:Name="Root"
              
              mc:Ignorable="d" 
              d:DesignHeight="15" d:DesignWidth="15">
-    <Button Content="{Binding Value, ElementName=Root}" FontFamily="Cascadia Code" FontSize="25"
+    <Button Click="Button_Click"
+            Content="{Binding Value, ElementName=Root}" FontFamily="Cascadia Code" FontSize="25"
             VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
             Width="65" Height="65"
             Foreground="#FFFFFF" Background="#7F5CC7" 

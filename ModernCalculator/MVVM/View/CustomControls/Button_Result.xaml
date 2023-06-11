@@ -7,7 +7,8 @@
              
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Button Content="=" FontFamily="Cascadia Code" FontSize="25"
+    <Button Click="Button_Click" 
+            Content="=" FontFamily="Cascadia Code" FontSize="25"
             VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
             Width="55" Height="55"
             Foreground="#FFFFFF" Background="#D28E0C" 

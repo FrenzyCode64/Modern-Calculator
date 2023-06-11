@@ -40,7 +40,8 @@
                     BorderBrush="#505050"
                     Grid.Row="0"
                     CornerRadius="10" BorderThickness="5">
-                <TextBlock Text="" FontFamily="Cascadia Code" FontSize="30"
+                <TextBlock x:Name="textblock_Display"
+                           Text="{Binding PropertyValue_enter, UpdateSourceTrigger=PropertyChanged}" FontFamily="Cascadia Code" FontSize="30"
                            VerticalAlignment="Center" Margin="5 0 0 0"
                            Foreground="#FFFFFF"/>
             </Border>
@@ -62,8 +63,10 @@
                             </LinearGradientBrush>
                         </Button.Background>
                     </Button>
-                    <Button Width="140"
+                    <Button Content="About" FontFamily="Cascadia Code" FontSize="20" 
                             HorizontalAlignment="Right"
+                            Width="140"
+                            Foreground="#E4D7EA"
                             BorderThickness="0">
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -102,17 +105,17 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
 
-                        <custom_controls:Button_BasicNum Value="1" Grid.Column="0" Grid.Row="0"/>
-                        <custom_controls:Button_BasicNum Value="2" Grid.Column="1" Grid.Row="0"/>
-                        <custom_controls:Button_BasicNum Value="3" Grid.Column="2" Grid.Row="0"/>
+                        <custom_controls:Button_BasicNum Value="1" EventClick="Click_BasicNum" Grid.Column="0" Grid.Row="0"/>
+                        <custom_controls:Button_BasicNum Value="2" EventClick="Click_BasicNum" Grid.Column="1" Grid.Row="0"/>
+                        <custom_controls:Button_BasicNum Value="3" EventClick="Click_BasicNum" Grid.Column="2" Grid.Row="0"/>
 
-                        <custom_controls:Button_BasicNum Value="4" Grid.Column="0" Grid.Row="1"/>
-                        <custom_controls:Button_BasicNum Value="5" Grid.Column="1" Grid.Row="1"/>
-                        <custom_controls:Button_BasicNum Value="6" Grid.Column="2" Grid.Row="1"/>
+                        <custom_controls:Button_BasicNum Value="4" EventClick="Click_BasicNum" Grid.Column="0" Grid.Row="1"/>
+                        <custom_controls:Button_BasicNum Value="5" EventClick="Click_BasicNum" Grid.Column="1" Grid.Row="1"/>
+                        <custom_controls:Button_BasicNum Value="6" EventClick="Click_BasicNum" Grid.Column="2" Grid.Row="1"/>
 
-                        <custom_controls:Button_BasicNum Value="7" Grid.Column="0" Grid.Row="2"/>
-                        <custom_controls:Button_BasicNum Value="8" Grid.Column="1" Grid.Row="2"/>
-                        <custom_controls:Button_BasicNum Value="9" Grid.Column="2" Grid.Row="2"/>
+                        <custom_controls:Button_BasicNum Value="7" EventClick="Click_BasicNum" Grid.Column="0" Grid.Row="2"/>
+                        <custom_controls:Button_BasicNum Value="8" EventClick="Click_BasicNum" Grid.Column="1" Grid.Row="2"/>
+                        <custom_controls:Button_BasicNum Value="9" EventClick="Click_BasicNum" Grid.Column="2" Grid.Row="2"/>
 
                     </Grid>
                     <Grid Grid.Column="1" Grid.Row="0">
@@ -125,18 +128,10 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
-                        <Button Margin="5 10"
-                                Background="#DCE14C" BorderThickness="0"
-                                Grid.Column="0" Grid.Row="0"/>
-                        <Button Margin="5 10"
-                                Background="#DCE14C" BorderThickness="0"
-                                Grid.Column="0" Grid.Row="1"/>
-                        <Button Margin="5 10"
-                                Background="#DCE14C" BorderThickness="0"
-                                Grid.Column="1" Grid.Row="0"/>
-                        <Button Margin="5 10"
-                                Background="#DCE14C" BorderThickness="0"
-                                Grid.Column="1" Grid.Row="2"/>
+                        <custom_controls:Button_OperationSign Operation="+" EventClick="Click_Operation" Grid.Column="0" Grid.Row="0"/>
+                        <custom_controls:Button_OperationSign Operation="-" EventClick="Click_Operation" Grid.Column="0" Grid.Row="1"/>
+                        <custom_controls:Button_OperationSign Operation="*" EventClick="Click_Operation" Grid.Column="1" Grid.Row="0"/>
+                        <custom_controls:Button_OperationSign Operation="/" EventClick="Click_Operation" Grid.Column="1" Grid.Row="1"/>
                     </Grid>
                     <Grid Grid.Column="0" Grid.Row="1">
                         <Grid.ColumnDefinitions>
@@ -145,12 +140,12 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
-                        <custom_controls:Button_Termination Operation="C" Grid.Column="0"/>
-                        <custom_controls:Button_BasicNum Value="0" Grid.Column="1"/>
-                        <custom_controls:Button_Termination Operation="X" Grid.Column="2"/>
+                        <custom_controls:Button_BasicNum EventClick="Click_BasicNum" Value="0" Grid.Column="1"/>
+                        <custom_controls:Button_Termination EventClick="Click_TerminateAll" Operation="C" Grid.Column="0"/>
+                        <custom_controls:Button_Termination EventClick="Click_TerminateLastNum" Operation="X" Grid.Column="2"/>
                     </Grid>
                     <Grid Grid.Column="1" Grid.Row="1">
-                        <custom_controls:Button_Result/>
+                        <custom_controls:Button_Result EventClick="Click_GetResult"/>
                     </Grid>
                 </Grid>
             </StackPanel>
