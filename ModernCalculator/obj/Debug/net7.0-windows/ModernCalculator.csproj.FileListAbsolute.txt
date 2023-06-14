@@ -28,3 +28,7 @@ E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net
 E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\CustomControls\Button_Result.baml
 E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\CustomControls\Button_OperationSign.g.cs
 E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\CustomControls\Button_OperationSign.baml
+E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\CustomControls\Button_Interface.g.cs
+E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\CustomControls\Button_Interface.baml
+E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\MVVM\View\Styles\Style_Interface.baml
+E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\obj\Debug\net7.0-windows\App.baml

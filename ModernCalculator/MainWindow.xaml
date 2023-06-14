@@ -28,127 +28,179 @@
             </LinearGradientBrush>
         </Border.BorderBrush>
 
-        <Grid Name="grid_UserMenu" 
-              Margin="25">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="54*"/>
-                <RowDefinition Height="461*"/>
-            </Grid.RowDefinitions>
+        <Grid>
+            <Grid Name="grid_UserMenu" 
+              Margin="25" Opacity="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="54*"/>
+                    <RowDefinition Height="461*"/>
+                </Grid.RowDefinitions>
 
-            <Border Name="border_Display" 
+                <Border Name="border_Display" 
                     Background="#000000" 
                     BorderBrush="#505050"
                     Grid.Row="0"
                     CornerRadius="10" BorderThickness="5">
-                <TextBlock x:Name="textblock_Display"
-                           Text="{Binding PropertyValue_enter, UpdateSourceTrigger=PropertyChanged}" FontFamily="Cascadia Code" FontSize="30"
-                           VerticalAlignment="Center" Margin="5 0 0 0"
-                           Foreground="#FFFFFF"/>
-            </Border>
-            <StackPanel Name="grid_ButtonsPanel"
+
+                    <Grid>
+                        <TextBlock x:Name="textblock_Display"
+                                   Text="{Binding PropertyValue_enter, UpdateSourceTrigger=PropertyChanged}" FontFamily="Cascadia Code" FontSize="30"
+                                   VerticalAlignment="Center" Margin="5 0 0 0"
+                                   Foreground="#FFFFFF"/>
+                        <TextBlock x:Name="textblock_Term"
+                                   Text="{Binding PropertyString_term, UpdateSourceTrigger=PropertyChanged}" FontFamily="Cascadia Code" FontSize="12.5"
+                                   HorizontalAlignment="Right" Margin="10 5"
+                                   Foreground="#B4B4B4"/>
+                    </Grid>
+                </Border>
+                <StackPanel Name="grid_ButtonsPanel"
                         Grid.Row="1" Margin="0 20 0 0">
-                <Grid Name="grid_SettingsPanel" Height="30">
-                    <Button Width="140"
+                    <Grid Name="grid_SettingsPanel" Height="30">
+                        <Button Content="Settings [In Dev]"
+                            Width="140"
                             HorizontalAlignment="Left"
                             BorderThickness="0">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="5"/>
-                            </Style>
-                        </Button.Resources>
-                        <Button.Background>
-                            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
-                                <GradientStop Color="#eacda3" Offset="0"/>
-                                <GradientStop Color="#d6ae7b" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <Button Content="About" FontFamily="Cascadia Code" FontSize="20" 
-                            HorizontalAlignment="Right"
-                            Width="140"
-                            Foreground="#E4D7EA"
-                            BorderThickness="0">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="5"/>
-                            </Style>
-                        </Button.Resources>
-                        <Button.Background>
-                            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
-                                <GradientStop Color="#B24592" Offset="0"/>
-                                <GradientStop Color="#F15F79" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-                    </Button>
-                </Grid>
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                            <Button.Background>
+                                <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                                    <GradientStop Color="#eacda3" Offset="0"/>
+                                    <GradientStop Color="#d6ae7b" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
 
-                <Grid Name="grid_ButtonPlaceHolder" 
+                        <custom_controls:Button_Interface BackGroundColor="#d6ae7b" ForeGroundColor="#E4D7EA"
+                                                          TextField="[In Dev]" 
+                                                          HorizontalAlignment="Left"
+                                                          EventClick="Click_AboutButton"/>
+                        <custom_controls:Button_Interface BackGroundColor="#F15F79" ForeGroundColor="#E4D7EA"
+                                                          TextField="About" ExitState="1"
+                                                          HorizontalAlignment="Right"
+                                                          EventClick="Click_AboutButton"/>
+                    </Grid>
+
+                    <Grid Name="grid_ButtonPlaceHolder" 
                       Margin="0 30 0 0" Height="350">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="0.25*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition Height="0.25*"/>
-                    </Grid.RowDefinitions>
-
-                    <Grid Grid.Column="0" Grid.Row="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="0.25*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
+                            <RowDefinition Height="0.25*"/>
                         </Grid.RowDefinitions>
 
-                        <custom_controls:Button_BasicNum Value="1" EventClick="Click_BasicNum" Grid.Column="0" Grid.Row="0"/>
-                        <custom_controls:Button_BasicNum Value="2" EventClick="Click_BasicNum" Grid.Column="1" Grid.Row="0"/>
-                        <custom_controls:Button_BasicNum Value="3" EventClick="Click_BasicNum" Grid.Column="2" Grid.Row="0"/>
+                        <Grid Grid.Column="0" Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
 
-                        <custom_controls:Button_BasicNum Value="4" EventClick="Click_BasicNum" Grid.Column="0" Grid.Row="1"/>
-                        <custom_controls:Button_BasicNum Value="5" EventClick="Click_BasicNum" Grid.Column="1" Grid.Row="1"/>
-                        <custom_controls:Button_BasicNum Value="6" EventClick="Click_BasicNum" Grid.Column="2" Grid.Row="1"/>
+                            <custom_controls:Button_BasicNum Value="1" EventClick="Click_BasicNum" Grid.Column="0" Grid.Row="0"/>
+                            <custom_controls:Button_BasicNum Value="2" EventClick="Click_BasicNum" Grid.Column="1" Grid.Row="0"/>
+                            <custom_controls:Button_BasicNum Value="3" EventClick="Click_BasicNum" Grid.Column="2" Grid.Row="0"/>
 
-                        <custom_controls:Button_BasicNum Value="7" EventClick="Click_BasicNum" Grid.Column="0" Grid.Row="2"/>
-                        <custom_controls:Button_BasicNum Value="8" EventClick="Click_BasicNum" Grid.Column="1" Grid.Row="2"/>
-                        <custom_controls:Button_BasicNum Value="9" EventClick="Click_BasicNum" Grid.Column="2" Grid.Row="2"/>
+                            <custom_controls:Button_BasicNum Value="4" EventClick="Click_BasicNum" Grid.Column="0" Grid.Row="1"/>
+                            <custom_controls:Button_BasicNum Value="5" EventClick="Click_BasicNum" Grid.Column="1" Grid.Row="1"/>
+                            <custom_controls:Button_BasicNum Value="6" EventClick="Click_BasicNum" Grid.Column="2" Grid.Row="1"/>
 
+                            <custom_controls:Button_BasicNum Value="7" EventClick="Click_BasicNum" Grid.Column="0" Grid.Row="2"/>
+                            <custom_controls:Button_BasicNum Value="8" EventClick="Click_BasicNum" Grid.Column="1" Grid.Row="2"/>
+                            <custom_controls:Button_BasicNum Value="9" EventClick="Click_BasicNum" Grid.Column="2" Grid.Row="2"/>
+
+                        </Grid>
+                        <Grid Grid.Column="1" Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <custom_controls:Button_OperationSign Operation="+" EventClick="Click_Operation" Grid.Column="0" Grid.Row="0"/>
+                            <custom_controls:Button_OperationSign Operation="-" EventClick="Click_Operation" Grid.Column="0" Grid.Row="1"/>
+                            <custom_controls:Button_OperationSign Operation="*" EventClick="Click_Operation" Grid.Column="1" Grid.Row="0"/>
+                            <custom_controls:Button_OperationSign Operation="/" EventClick="Click_Operation" Grid.Column="1" Grid.Row="1"/>
+                        </Grid>
+                        <Grid Grid.Column="0" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <custom_controls:Button_BasicNum EventClick="Click_BasicNum" Value="0" Grid.Column="1"/>
+                            <custom_controls:Button_Termination EventClick="Click_TerminateAll" Operation="C" Grid.Column="0"/>
+                            <custom_controls:Button_Termination EventClick="Click_TerminateLastNum" Operation="X" Grid.Column="2"/>
+                        </Grid>
+                        <Grid Grid.Column="1" Grid.Row="1">
+                            <custom_controls:Button_Result EventClick="Click_GetResult"/>
+                        </Grid>
                     </Grid>
-                    <Grid Grid.Column="1" Grid.Row="0">
+                </StackPanel>
+            </Grid>
+
+            <Border x:Name="border_AboutMenu" Margin="25" 
+                    Opacity="0" Panel.ZIndex="-1"
+                    BorderThickness="5" BorderBrush="#EC9821"
+                    CornerRadius="20">
+                <StackPanel>
+                    <TextBlock Text="Advanced Calculator" FontFamily="Cascadia Code" FontSize="25"
+                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                               Foreground="#FFFFFF"
+                               Margin="12.5"/>
+                    <TextBlock Text="Made by Frenzy" FontWeight="Bold" FontFamily="Cascadia Code" FontSize="20"
+                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                               Foreground="#FFFFFF"
+                               Margin="0"/>
+                    <TextBlock Text="Personal links | Social Media" FontFamily="Cascadia Code" FontSize="12.5"
+                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                               Foreground="#FFFFFF"
+                               Margin="0 50 0 20"/>
+
+                    <Grid x:Name="grid_Images"
+                          Margin="20 0">
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
+                        <Image x:Name="icon_GitHub" Source="Images/icon_GitHub.png"
+                               Grid.Row="0" Margin="15"
+                               MouseDown="Site_MouseDown"/>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
 
-                        <custom_controls:Button_OperationSign Operation="+" EventClick="Click_Operation" Grid.Column="0" Grid.Row="0"/>
-                        <custom_controls:Button_OperationSign Operation="-" EventClick="Click_Operation" Grid.Column="0" Grid.Row="1"/>
-                        <custom_controls:Button_OperationSign Operation="*" EventClick="Click_Operation" Grid.Column="1" Grid.Row="0"/>
-                        <custom_controls:Button_OperationSign Operation="/" EventClick="Click_Operation" Grid.Column="1" Grid.Row="1"/>
+                            <Image x:Name="icon_Steam" Source="Images/icon_Steam.png"
+                                   HorizontalAlignment="Left"
+                                   Grid.Column="0"
+                                   MouseDown="Site_MouseDown"/>
+                            <Image x:Name="icon_Youtube" Source="Images/icon_Youtube.png"
+                                   VerticalAlignment="Center" HorizontalAlignment="Right"
+                                   Grid.Column="1"
+                                   MouseDown="Site_MouseDown"/>
+                        </Grid>
                     </Grid>
-                    <Grid Grid.Column="0" Grid.Row="1">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
 
-                        <custom_controls:Button_BasicNum EventClick="Click_BasicNum" Value="0" Grid.Column="1"/>
-                        <custom_controls:Button_Termination EventClick="Click_TerminateAll" Operation="C" Grid.Column="0"/>
-                        <custom_controls:Button_Termination EventClick="Click_TerminateLastNum" Operation="X" Grid.Column="2"/>
-                    </Grid>
-                    <Grid Grid.Column="1" Grid.Row="1">
-                        <custom_controls:Button_Result EventClick="Click_GetResult"/>
-                    </Grid>
-                </Grid>
-            </StackPanel>
+                    <custom_controls:Button_Interface TextField="Back To Calculator"
+                                                      BackGroundColor="#F15F79" ForeGroundColor="#E4D7EA"
+                                                      EventClick="Click_AboutButton" ExitState="-1"/>
+                </StackPanel>
+            </Border>
         </Grid>
     </Border>
 </Window>

@@ -10,6 +10,9 @@
     <Compile Update="MVVM\View\CustomControls\Button_BasicNum.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\CustomControls\Button_Interface.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\CustomControls\Button_OperationSign.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -27,6 +30,9 @@
     <Page Update="MVVM\View\CustomControls\Button_BasicNum.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="MVVM\View\CustomControls\Button_Interface.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MVVM\View\CustomControls\Button_OperationSign.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,6 +40,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\CustomControls\Button_Termination.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\Styles\Style_Interface.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

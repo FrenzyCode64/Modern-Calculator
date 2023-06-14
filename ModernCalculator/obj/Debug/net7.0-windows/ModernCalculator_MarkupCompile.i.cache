@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 E:\Activities\Coding\Projects\C#\ModernCalculator\ModernCalculator\App.xaml
-5-756431610
+7215766901
 
-9-617297035
+10-894500390
 1981827736222
-MainWindow.xaml;MVVM\View\CustomControls\Button_BasicNum.xaml;MVVM\View\CustomControls\Button_OperationSign.xaml;MVVM\View\CustomControls\Button_Result.xaml;MVVM\View\CustomControls\Button_Termination.xaml;
+MainWindow.xaml;MVVM\View\CustomControls\Button_BasicNum.xaml;MVVM\View\CustomControls\Button_Interface.xaml;MVVM\View\CustomControls\Button_OperationSign.xaml;MVVM\View\CustomControls\Button_Result.xaml;MVVM\View\CustomControls\Button_Termination.xaml;MVVM\View\Styles\Style_Interface.xaml;
 
 True
 

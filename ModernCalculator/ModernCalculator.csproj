@@ -7,4 +7,20 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\icon_GitHub.png" />
+    <None Remove="Images\icon_Steam.png" />
+    <None Remove="Images\icon_YouTube.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MVVM\ViewModel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\icon_GitHub.png" />
+    <Resource Include="Images\icon_Steam.png" />
+    <Resource Include="Images\icon_YouTube.png" />
+  </ItemGroup>
+
 </Project>
