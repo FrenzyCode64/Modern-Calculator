@@ -12,7 +12,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="15" d:DesignWidth="15">
     <Button Click="Button_Click"
-            Content="{Binding Value, ElementName=Root}" FontFamily="Cascadia Code" FontSize="25"
+            Content="{Binding Value, ElementName=Root}" FontFamily="/Fonts/#Cascadia Code" FontSize="25"
             VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
             Width="65" Height="65"
             Foreground="#FFFFFF" Background="#7F5CC7" 

@@ -44,11 +44,11 @@
 
                     <Grid>
                         <TextBlock x:Name="textblock_Display"
-                                   Text="{Binding PropertyValue_enter, UpdateSourceTrigger=PropertyChanged}" FontFamily="Cascadia Code" FontSize="30"
+                                   Text="{Binding PropertyValue_enter, UpdateSourceTrigger=PropertyChanged}" FontFamily="/Fonts/#Cascadia Code" FontSize="30"
                                    VerticalAlignment="Center" Margin="5 0 0 0"
                                    Foreground="#FFFFFF"/>
                         <TextBlock x:Name="textblock_Term"
-                                   Text="{Binding PropertyString_term, UpdateSourceTrigger=PropertyChanged}" FontFamily="Cascadia Code" FontSize="12.5"
+                                   Text="{Binding PropertyString_term, UpdateSourceTrigger=PropertyChanged}" FontFamily="/Fonts/#Cascadia Code" FontSize="12.5"
                                    HorizontalAlignment="Right" Margin="10 5"
                                    Foreground="#B4B4B4"/>
                     </Grid>
@@ -61,8 +61,11 @@
                                                           HorizontalAlignment="Left"
                                                           EventClick="Click_AboutButton"/-->
                         <custom_controls:Button_Interface BackGroundColor="#F15F79" ForeGroundColor="#E4D7EA"
-                                                          TextField="About" ExitState="1"
+                                                          TextField="About" ExitState="1" HorizontalAlignment="Right"
                                                           EventClick="Click_AboutButton"/>
+                        <custom_controls:Button_Interface BackGroundColor="#594CD9" ForeGroundColor="#E4D7EA"
+                                                          TextField="Exit" ExitState="1" HorizontalAlignment="Left"
+                                                          EventClick="Window_Exit"/>
                     </Grid>
 
                     <Grid Name="grid_ButtonPlaceHolder" 
@@ -142,15 +145,15 @@
                     BorderThickness="5" BorderBrush="#EC9821"
                     CornerRadius="20">
                 <StackPanel>
-                    <TextBlock Text="Advanced Calculator" FontFamily="Cascadia Code" FontSize="25"
+                    <TextBlock Text="Advanced Calculator" FontFamily="/Fonts/#Cascadia Code" FontSize="25"
                                VerticalAlignment="Center" HorizontalAlignment="Center"
                                Foreground="#FFFFFF"
                                Margin="12.5"/>
-                    <TextBlock Text="Made by Frenzy" FontWeight="Bold" FontFamily="Cascadia Code" FontSize="20"
+                    <TextBlock Text="Made by Frenzy" FontWeight="Bold" FontFamily="/Fonts/#Cascadia Code" FontSize="20"
                                VerticalAlignment="Center" HorizontalAlignment="Center"
                                Foreground="#FFFFFF"
                                Margin="0"/>
-                    <TextBlock Text="Personal links | Social Media" FontFamily="Cascadia Code" FontSize="12.5"
+                    <TextBlock Text="Personal links | Social Media" FontFamily="/Fonts/#Cascadia Code" FontSize="12.5"
                                VerticalAlignment="Center" HorizontalAlignment="Center"
                                Foreground="#FFFFFF"
                                Margin="0 50 0 20"/>

@@ -153,6 +153,11 @@ namespace ModernCalculator
 
         }
 
+        public void Window_Exit(object sender, RoutedEventArgs event_args)
+        {
+            Environment.Exit(0);
+        }
+
         private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)

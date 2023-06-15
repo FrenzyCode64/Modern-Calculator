@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\CascadiaCode-Regular.ttf" />
     <None Remove="Images\icon_GitHub.png" />
     <None Remove="Images\icon_Steam.png" />
     <None Remove="Images\icon_YouTube.png" />
@@ -18,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fonts\CascadiaCode-Regular.ttf" />
     <Resource Include="Images\icon_GitHub.png" />
     <Resource Include="Images\icon_Steam.png" />
     <Resource Include="Images\icon_YouTube.png" />

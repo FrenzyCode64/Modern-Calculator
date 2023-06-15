@@ -9,7 +9,7 @@
              
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Button Content="{Binding TextField, ElementName=Root}" FontFamily="Cascadia Code" FontSize="20" 
+    <Button Content="{Binding TextField, ElementName=Root}" FontFamily="/Fonts/#Cascadia Code" FontSize="20" 
             Background="{Binding BackGroundColor, ElementName=Root}" 
             Foreground="{Binding ForeGroundColor, ElementName=Root}"
             Width="140" Click="Button_Click"
