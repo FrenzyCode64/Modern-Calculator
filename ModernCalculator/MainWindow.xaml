@@ -56,30 +56,12 @@
                 <StackPanel Name="grid_ButtonsPanel"
                         Grid.Row="1" Margin="0 20 0 0">
                     <Grid Name="grid_SettingsPanel" Height="30">
-                        <Button Content="Settings [In Dev]"
-                            Width="140"
-                            HorizontalAlignment="Left"
-                            BorderThickness="0">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="5"/>
-                                </Style>
-                            </Button.Resources>
-                            <Button.Background>
-                                <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
-                                    <GradientStop Color="#eacda3" Offset="0"/>
-                                    <GradientStop Color="#d6ae7b" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Button.Background>
-                        </Button>
-
-                        <custom_controls:Button_Interface BackGroundColor="#d6ae7b" ForeGroundColor="#E4D7EA"
-                                                          TextField="[In Dev]" 
+                        <!--custom_controls:Button_Interface BackGroundColor="#d6ae7b" ForeGroundColor="#59819B"
+                                                          TextField="Settings" 
                                                           HorizontalAlignment="Left"
-                                                          EventClick="Click_AboutButton"/>
+                                                          EventClick="Click_AboutButton"/-->
                         <custom_controls:Button_Interface BackGroundColor="#F15F79" ForeGroundColor="#E4D7EA"
                                                           TextField="About" ExitState="1"
-                                                          HorizontalAlignment="Right"
                                                           EventClick="Click_AboutButton"/>
                     </Grid>
 
@@ -149,11 +131,14 @@
                             <custom_controls:Button_Result EventClick="Click_GetResult"/>
                         </Grid>
                     </Grid>
+                    <TextBlock Text="FREENZY @2023 [Unlicense]" 
+                               Margin="0 10" HorizontalAlignment="Center"
+                               Foreground="#8B8B8B" />
                 </StackPanel>
             </Grid>
 
             <Border x:Name="border_AboutMenu" Margin="25" 
-                    Opacity="0" Panel.ZIndex="-1"
+                    Opacity="0" Panel.ZIndex="-1" IsEnabled="False"
                     BorderThickness="5" BorderBrush="#EC9821"
                     CornerRadius="20">
                 <StackPanel>

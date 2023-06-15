@@ -1,15 +1,12 @@
 ﻿using ModernCalculator.MVVM.View.CustomControls;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
-using System.Windows.Media.Imaging;
 
 namespace ModernCalculator
 {
@@ -66,7 +63,7 @@ namespace ModernCalculator
             PropertyValue_enter = Convert.ToInt32(PropertyValue_enter.ToString() + button_sender.Value.ToString());
             operand_info[PropertyCurrent_operand] = PropertyValue_enter;
 
-            Update_TermString();
+            PropertyString_term += button_sender.Value.ToString();
         }
 
         private void Click_Operation(object sender, RoutedEventArgs event_args)
@@ -74,7 +71,7 @@ namespace ModernCalculator
             Button_OperationSign button_sender = (Button_OperationSign)sender;
 
             operation_sign = button_sender.Operation[0];
-            PropertyString_term += button_sender.Operation[0];
+            PropertyString_term += operation_sign;
 
             PropertyCurrent_operand++;
             PropertyValue_enter = 0;
@@ -97,17 +94,25 @@ namespace ModernCalculator
             for (int a = 0; a < OPERAND_LIST_SIZE; a++)
                 operand_info[a] = 0;
 
+            PropertyString_term = PropertyValue_enter.ToString();
             operand_info[0] = PropertyValue_enter;
-            PropertyCurrent_operand++;
 
-            Update_TermString();
+            PropertyCurrent_operand++;
         }
 
         public void Click_TerminateLastNum(object sender, RoutedEventArgs event_args)
         {
             string modify_value = PropertyValue_enter.ToString();
+            PropertyString_term = PropertyString_term.Substring(0, PropertyString_term.Length - 1);
 
-            PropertyValue_enter = Convert.ToInt32(modify_value.Substring(0, modify_value.Length - 1));
+            if (modify_value.Length <= 1)
+            {
+                PropertyValue_enter = 0;
+                PropertyString_term += 0;
+            }
+            else
+                PropertyValue_enter = Convert.ToInt32(modify_value.Substring(0, modify_value.Length - 1));
+
             operand_info[PropertyCurrent_operand] = PropertyValue_enter;
         }
 
@@ -118,6 +123,7 @@ namespace ModernCalculator
                 operand_info[a] = 0;
 
             operation_sign = '\0';
+            PropertyString_term = null;
         }
 
         private void Click_AboutButton(object sender, RoutedEventArgs event_args)
@@ -142,14 +148,9 @@ namespace ModernCalculator
             }
         }
 
-        private void Update_TermString()
+        private void Change_Settings()
         {
-            for (int a = 0; a < OPERAND_LIST_SIZE; a++)
-            {
-                PropertyString_term += operand_info[a].ToString();
-                if (a < OPERAND_LIST_SIZE - 1)
-                    PropertyString_term += operation_sign;
-            }
+
         }
 
         private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)

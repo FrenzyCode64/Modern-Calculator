@@ -14,5 +14,11 @@
             Content="{Binding Operation, ElementName=Root}" FontFamily="Cascadia Code" FontSize="25"
             VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="5 5"
             Foreground="#000000" Background="#DCE14C" 
-            BorderThickness="0"/>
+            BorderThickness="0">
+        <Button.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+        </Button.Resources>
+    </Button>
 </UserControl>
